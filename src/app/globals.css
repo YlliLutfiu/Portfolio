@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #06070b;
+  --foreground: #edeffd;
+  --accent: #7dd3fc;
+  --surface: #0b0d14;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-sora);
+  --font-mono: var(--font-jetbrains);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root[data-theme="light"] {
+  --background: #f4f7ff;
+  --foreground: #101428;
+  --accent: #0284c7;
+  --surface: #ffffff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.015em;
+  background-image:
+    radial-gradient(circle at 12% 15%, rgba(125, 211, 252, 0.15), transparent 30%),
+    radial-gradient(circle at 86% 6%, rgba(129, 140, 248, 0.14), transparent 26%),
+    radial-gradient(circle at 50% 95%, rgba(56, 189, 248, 0.1), transparent 28%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  border-color: color-mix(in oklab, var(--foreground) 12%, transparent);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 45%, transparent);
+  color: var(--foreground);
+}
+
+.premium-card {
+  border: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent);
+  background: linear-gradient(
+    160deg,
+    color-mix(in oklab, white 10%, transparent),
+    color-mix(in oklab, white 3%, transparent)
+  );
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.noise-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 0.35px, transparent 0.35px);
+  background-size: 3px 3px;
+}
+
+@keyframes pulse-orb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -16px, 0) scale(1.06);
+  }
+}
+
+.orb-pulse {
+  animation: pulse-orb 9s ease-in-out infinite;
 }
