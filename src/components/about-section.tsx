@@ -6,7 +6,7 @@ import SectionWrapper from "./section-wrapper";
 
 const highlights = [
   {
-    title: "2+ Years Experience",
+    title: "~2 Years Experience",
     description:
       "Building full-stack web applications in real-world environments using Angular and NestJS.",
     icon: BriefcaseBusiness,

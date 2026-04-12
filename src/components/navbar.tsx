@@ -14,7 +14,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between rounded-full border border-white/10 bg-surface/80 px-6 shadow-[0_8px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl">
         <a href="#home" className="text-sm font-semibold tracking-[0.28em] text-accent">
-          YLLI
+          ylli.dev
         </a>
         <div className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (

@@ -57,20 +57,20 @@ export default function HeroSection() {
                 Contact Me
               </a>
             </div>
-            <div className="mt-12 grid max-w-2xl grid-cols-3 gap-4">
-              <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
-                <p className="text-2xl font-semibold">~2</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.16em] text-foreground/65">Years of Experience</p>
+            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:max-w-2xl md:max-w-none">
+              <div className="group rounded-2xl border border-white/12 bg-white/5 p-3 sm:p-4 text-center overflow-hidden">
+                <p className="text-xl sm:text-2xl font-semibold">~2</p>
+                <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.16em] text-foreground/65 leading-tight line-clamp-2">Years of Experience</p>
               </div>
-              <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
-                <p className="text-2xl font-semibold">5+</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.16em] text-foreground/65">
+              <div className="group rounded-2xl border border-white/12 bg-white/5 p-3 sm:p-4 text-center overflow-hidden">
+                <p className="text-xl sm:text-2xl font-semibold">5+</p>
+                <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.16em] text-foreground/65 leading-tight line-clamp-2">
                   Projects
                 </p>
               </div>
-              <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
-                <p className="text-2xl font-semibold">8+</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.16em] text-foreground/65">
+              <div className="group rounded-2xl border border-white/12 bg-white/5 p-3 sm:p-4 text-center overflow-hidden">
+                <p className="text-xl sm:text-2xl font-semibold">8+</p>
+                <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.16em] text-foreground/65 leading-tight line-clamp-2">
                   Technologies
                 </p>
               </div>
@@ -81,31 +81,42 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="relative mx-auto hidden h-[30rem] w-full max-w-[28rem] lg:block"
+            className="relative mx-auto h-112 w-full max-w-md lg:h-136 lg:max-w-136"
           >
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
-              className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/15"
+              transition={{ duration: 34, repeat: Infinity, ease: "linear" }}
+              className="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
             />
+
             <motion.div
               animate={{ rotate: -360 }}
-              transition={{ duration: 34, repeat: Infinity, ease: "linear" }}
-              className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
+              transition={{ duration: 42, repeat: Infinity, ease: "linear" }}
+              className="absolute left-1/2 top-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/5"
             />
+
             {orbitTech.map((tech, index) => {
               const angle = (index / orbitTech.length) * Math.PI * 2;
-              const radius = 158;
-              const x = Math.cos(angle) * radius;
-              const y = Math.sin(angle) * radius;
+
+              const radius = 210;
+
+              const x = parseFloat((Math.cos(angle) * radius).toFixed(2));
+              const y = parseFloat((Math.sin(angle) * radius).toFixed(2));
 
               return (
                 <motion.div
                   key={tech}
-                  animate={{ y: [0, -8, 0], x: [0, 4, 0] }}
-                  transition={{ duration: 5 + index, repeat: Infinity, ease: "easeInOut" }}
+                  animate={{ y: [0, -6, 0], x: [0, 3, 0] }}
+                  transition={{
+                    duration: 6 + index,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   className="absolute left-1/2 top-1/2"
-                  style={{ translateX: `${x}px`, translateY: `${y}px` }}
+                  style={{
+                    left: `calc(50% + ${x}px)`,
+                    top: `calc(50% + ${y}px)`,
+                  }}
                 >
                   <span className="whitespace-nowrap rounded-full border border-white/20 bg-surface/85 px-3 py-1 text-xs text-foreground/85 shadow-[0_6px_20px_rgba(0,0,0,0.28)]">
                     {tech}
@@ -117,17 +128,25 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-1/2 top-1/2 w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-white/15 bg-gradient-to-b from-white/15 to-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.4)] backdrop-blur"
+              className="absolute left-1/2 top-1/2 w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-white/15 bg-gradient-to-b from-white/15 to-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.4)] backdrop-blur z-10"
             >
-              <p className="text-xs uppercase tracking-[0.18em] text-accent">Now Building</p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em]">AI-Ready SaaS Systems</h3>
-              <p className="mt-3 text-sm leading-7 text-foreground/70">
-                Crafting scalable platforms with polished UX, clean architecture, and resilient APIs.
+              <p className="text-xs uppercase tracking-[0.18em] text-accent">
+                Now Building
               </p>
+
+              <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em]">
+                SentinelAI
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-foreground/70">
+                AI-powered scam & fraud detection platform designed to analyze
+                user inputs and detect suspicious patterns.
+              </p>
+
               <div className="mt-6 space-y-2 text-xs text-foreground/68">
-                <p>{">"} API latency reduced by 43%</p>
-                <p>{">"} Design system across 3 products</p>
-                <p>{">"} 200k+ monthly users supported</p>
+                <p>{">"} Pattern detection & risk scoring</p>
+                <p>{">"} Real-time analysis architecture</p>
+                <p>{">"} AI integration in progress</p>
               </div>
             </motion.div>
           </motion.div>

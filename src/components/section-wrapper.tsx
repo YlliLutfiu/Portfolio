@@ -18,7 +18,6 @@ export default function SectionWrapper({
       <div className="mb-12 md:mb-14">
         <div className="mb-4 flex items-center gap-3">
           <span className="h-px w-10 bg-gradient-to-r from-accent to-transparent" />
-          <p className="text-xs uppercase tracking-[0.26em] text-accent/95">Portfolio</p>
         </div>
         <h2 className="text-4xl font-semibold tracking-[-0.03em] md:text-5xl">{title}</h2>
         {subtitle ? (

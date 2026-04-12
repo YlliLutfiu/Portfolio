@@ -6,6 +6,7 @@ export type Project = {
   images?: string[];
   github: string;
   demo: string;
+  id: number;
 };
 
 export type Experience = {
@@ -25,6 +26,7 @@ export const navItems = [
 
 export const frontendSkills = [
   "Angular",
+  "RxJS",
   "React",
   "Next.js",
   "TypeScript",
@@ -32,23 +34,30 @@ export const frontendSkills = [
   "Redux",
   "Tailwind CSS",
   "Framer Motion",
+  "Chart.js",
+  "SCSS",
+  "Ionic",
 ];
 
 export const backendSkills = [
   "NestJS",
   "Node.js",
   "PostgreSQL",
+  "TypeORM",
   "REST APIs",
   "WebSockets",
   "OpenAPI / Swagger",
+  "JWT Authentication",
+  "RBAC (Role-Based Access Control)",
+  "PDF Generation (Puppeteer / Playwright)",
 ];
 
 export const toolSkills = [
   "Git & GitHub",
   "Bitbucket",
   "Docker",
+  "OpenAPI Generator",
   "Agile / Scrum",
-  "Postman",
   "Database Migrations",
 ];
 
@@ -57,18 +66,20 @@ export const projects: Project[] = [
     name: "My Business Invoice",
     label: "Professional Project",
     description:
-      "Full-stack business application focused on invoice management, employee workflows, and real-time operations. Features include invoice customization and PDF export (single & bulk), CSV imports, time tracking, project/task management, and live notifications.",
+      "Full-stack business application focused on invoice management, employee workflows, and real-time operations. Features include invoice customization and PDF export (single & bulk), CSV imports, time tracking, project/task management, live notifications and live chat.",
     tech: [
-      "Angular 17",
+      "Angular 17+",
       "Tailwind",
       "Ionic",
       "NestJS",
       "TypeORM",
       "PostgreSQL",
-      "Docker",
       "WebSockets",
       "OpenAPI",
+      "Docker",
       "Swagger",
+      "Playwright",
+      "Puppeteer",
     ],
     images: [
       "/projects/myb-sc1.png",
@@ -80,6 +91,7 @@ export const projects: Project[] = [
     ],
     github: "#",
     demo: "#",
+    id: 1,
   },
   {
     name: "Social Media Platform",
@@ -89,6 +101,7 @@ export const projects: Project[] = [
     tech: ["React", "Redux", "Node.js", "REST API"],
     github: "#",
     demo: "#",
+    id: 2,
   },
   {
     name: "Developer Portfolio",
@@ -96,8 +109,29 @@ export const projects: Project[] = [
     description:
       "High-performance portfolio built with Next.js, Tailwind CSS, and Framer Motion, focused on modern UI, smooth animations, and optimized user experience.",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/YlliLutfiu",
+    github: "https://github.com/YlliLutfiu/Portfolio",
     demo: "#",
+    id: 3,
+  },
+  {
+    name: "Test project 1",
+    label: "Test Project",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    tech: ["React", "Redux", "Node.js", "REST API"],
+    github: "#",
+    demo: "#",
+    id: 4,
+  },
+  {
+    name: "Test project 2",
+    label: "Test Project",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    tech: ["React", "Redux", "Node.js", "REST API"],
+    github: "#",
+    demo: "#",
+    id: 5,
   },
 ];
 
