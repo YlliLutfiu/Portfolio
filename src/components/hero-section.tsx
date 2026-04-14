@@ -39,8 +39,8 @@ export default function HeroSection() {
               Crafting scalable full-stack applications with clean architecture and exceptional user experience.
             </h1>
             <p className="mt-8 max-w-3xl text-base leading-8 text-foreground/74 md:text-xl md:leading-9">
-              Full-stack developer with ~2 years of experience specializing in Angular and NestJS. 
-              I focus on building performant, maintainable applications with strong frontend architecture, 
+              Full-stack developer with ~2 years of experience specializing in Angular and NestJS.
+              I focus on building performant, maintainable applications with strong frontend architecture,
               real-time features, and clean backend systems.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -86,13 +86,13 @@ export default function HeroSection() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 34, repeat: Infinity, ease: "linear" }}
-              className="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
+              className="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white/10"
             />
 
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 42, repeat: Infinity, ease: "linear" }}
-              className="absolute left-1/2 top-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/5"
+              className="absolute left-1/2 top-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white/5"
             />
 
             {orbitTech.map((tech, index) => {

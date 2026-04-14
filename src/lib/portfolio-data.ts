@@ -114,32 +114,42 @@ export const projects: Project[] = [
     id: 3,
   },
   {
-    name: "Test project 1",
-    label: "Test Project",
+    name: "StaffBase",
+    label: "Personal Project",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    tech: ["React", "Redux", "Node.js", "REST API"],
-    github: "#",
+      "A full-stack employee management system for handling organizational workforce data, including employee records, departments, tasks, and salary management. The application features secure authentication, structured backend architecture, and a modern dashboard with data visualization and reporting capabilities.",
+    tech: ["Angular", "NestJS", "TypeORM", "PostgreSQL", "Docker"],
+    github: "https://github.com/YlliLutfiu/StaffBase",
     demo: "#",
     id: 4,
   },
   {
-    name: "Test project 2",
-    label: "Test Project",
+    name: "BiteCosmetics",
+    label: "Personal Project",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    tech: ["React", "Redux", "Node.js", "REST API"],
-    github: "#",
+      "A full-stack e-commerce web application for browsing and displaying cosmetic products with dynamic content management. The project integrates frontend and backend functionality with a MySQL database, allowing product data to be retrieved and managed through server-side logic using PHP.",
+    tech: ["HTML", "CSS", "PHP", "MySQL"],
+    github: "https://github.com/YlliLutfiu/BiteCosmetics",
     demo: "#",
     id: 5,
   },
+  {
+    name: "BankSystem",
+    label: "Personal Project",
+    description:
+      "A console-based banking system built in Java that simulates core banking operations such as account management, deposits, withdrawals, and transfers between accounts. The system follows object-oriented design principles and includes transaction handling with configurable fees, as well as tracking of total transfers and fees collected. It demonstrates core backend logic, encapsulation, and real-world financial operation simulation.",
+    tech: ["Java (OOP, CLI Application)"],
+    github: "https://github.com/YlliLutfiu/BankSystem",
+    demo: "#",
+    id: 6,
+  }
 ];
 
 export const experience: Experience[] = [
   {
     role: "Full-Stack Software Developer",
     company: "Code202",
-    duration: "07/2024 - Present",
+    duration: "07/2024 - 03/2026",
     achievements: [
       "Engineered and maintained a scalable full-stack application using Angular and NestJS.",
       "Designed and implemented RESTful APIs with PostgreSQL for reliable data management.",

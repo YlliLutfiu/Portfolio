@@ -12,9 +12,9 @@ import { ArrowUpRight, ExternalLink, GitBranch, ChevronLeft, ChevronRight } from
 import { motion } from 'framer-motion';
 import SectionWrapper from './section-wrapper';
 
-interface ProjectsSectionProps {}
+interface ProjectsSectionProps { }
 
-export default function ProjectsSection({}: ProjectsSectionProps) {
+export default function ProjectsSection({ }: ProjectsSectionProps) {
   return (
     <SectionWrapper
       id="projects"
@@ -33,11 +33,10 @@ export default function ProjectsSection({}: ProjectsSectionProps) {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: index * 0.08, duration: 0.45 }}
               whileHover={{ y: -10, scale: 1.01 }}
-              className={`group premium-card relative overflow-hidden rounded-3xl p-6 lg:p-7 flex flex-col justify-between ${
-                isFeatured
+              className={`group premium-card relative overflow-hidden rounded-3xl p-6 lg:p-7 flex flex-col justify-between ${isFeatured
                   ? 'md:col-span-2 lg:col-span-3 xl:col-span-4 lg:row-span-2 col-start-1 row-start-1'
                   : 'md:col-span-1 lg:col-span-2'
-              }`}
+                }`}
             >
               <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                 <motion.div
@@ -59,9 +58,8 @@ export default function ProjectsSection({}: ProjectsSectionProps) {
                 </div>
 
                 <h3
-                  className={`font-semibold tracking-[-0.02em] ${
-                    isFeatured ? 'text-2xl lg:text-3xl mb-6' : 'text-xl lg:text-2xl mb-4'
-                  }`}
+                  className={`font-semibold tracking-[-0.02em] ${isFeatured ? 'text-2xl lg:text-3xl mb-6' : 'text-xl lg:text-2xl mb-4'
+                    }`}
                 >
                   {project.name}
                 </h3>
@@ -95,7 +93,7 @@ export default function ProjectsSection({}: ProjectsSectionProps) {
                           <img
                             src={img}
                             alt={`${project.name} screenshot ${i + 1}`}
-                            className="h-full w-full object-cover transition-all duration-500 hover:scale-105 hover:brightness-110"
+                            className="h-full w-full object-contain transition-all duration-500 hover:scale-105 hover:brightness-110"
                             loading="lazy"
                           />
                         </SwiperSlide>

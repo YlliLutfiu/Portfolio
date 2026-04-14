@@ -17,7 +17,7 @@ function SkillGroup({ title, skills }: SkillGroupProps) {
         {skills.map((skill) => (
           <span
             key={skill}
-            className="rounded-full border border-white/15 bg-background/60 px-3.5 py-1.5 text-xs text-foreground/85 transition hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_8px_16px_rgba(125,211,252,0.2)]"
+            className="cursor-pointer rounded-full border border-white/15 bg-background/60 px-3.5 py-1.5 text-xs text-foreground/85 transition hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_8px_16px_rgba(125,211,252,0.2)]"
           >
             {skill}
           </span>
