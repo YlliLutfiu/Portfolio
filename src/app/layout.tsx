@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Ylli Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://portfolio-navy-theta-16.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ylli Lutfiu Portfolio",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Ylli Lutfiu | Full-Stack Developer",
     description:
       "Full-stack developer specializing in Angular, NestJS, and modern web applications.",
-    images: ["/og-image.png"],
+    images: ["https://portfolio-navy-theta-16.vercel.app/og-image.png"],
   },
 
   robots: {
