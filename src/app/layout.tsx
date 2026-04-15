@@ -15,13 +15,29 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Ylli Lutfiu",
+      jobTitle: "Full-Stack Developer",
+      url: "https://portfolio-navy-theta-16.vercel.app",
+      sameAs: [
+        "https://github.com/YlliLutfiu",
+      ],
+    }),
+  }}
+/>
+
 export const metadata: Metadata = {
   title: {
     default: "Ylli Lutfiu | Full-Stack Developer",
     template: "%s | Ylli Lutfiu",
   },
   description:
-    "Full-stack developer specializing in Angular, NestJS, and scalable web applications. Explore projects, experience, and modern web development work.",
+    "Full-stack developer specializing in Angular, NestJS, and modern web applications. Portfolio showcasing projects, experience, and scalable software engineering work.",
 
   keywords: [
     "Ylli Lutfiu",
@@ -33,6 +49,16 @@ export const metadata: Metadata = {
     "Backend Developer",
     "JavaScript",
     "TypeScript",
+    "Full Stack Developer Kosovo",
+    "Next.js Portfolio",
+    "Software Engineer Portfolio",
+    "Web Developer Prishtinë",
+    "Web Developer Prizren",
+    "TypeScript Developer",
+    "Javascript Developer",
+    "Software Engineer Kosovo",
+    "Software Engineer Prishtinë",
+    "Software Engineer Prizren",
   ],
 
   authors: [{ name: "Ylli Lutfiu" }],
