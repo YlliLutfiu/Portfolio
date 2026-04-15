@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Ylli Lutfiu | Full-Stack Developer",
     description:
       "Portfolio of Ylli Lutfiu – Full-stack developer building scalable web applications with Angular and NestJS.",
-    // url: "https://your-domain.com", // replace later with your domain !!!
+    url: "https://portfolio-navy-theta-16.vercel.app", // replace later with your domain !!!
     siteName: "Ylli Portfolio",
     images: [
       {
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  // metadataBase: new URL("https://your-domain.com"), // update later !!!
+  metadataBase: new URL("https://portfolio-navy-theta-16.vercel.app"), // update later !!!
 };
 
 export default function RootLayout({
