@@ -3,6 +3,7 @@ import { JetBrains_Mono, Sora } from "next/font/google";
 import "./globals.css";
 import { ToastProvider } from "@/components/toast";
 import BackToTop from "@/components/back-to-top";
+import { Analytics } from "@vercel/analytics/react";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Ylli Portfolio",
     images: [
       {
-        url: "/og-image.png", // create this later !!!
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ylli Lutfiu Portfolio",
@@ -84,6 +85,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col">
         <ToastProvider>{children}</ToastProvider>
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   );
