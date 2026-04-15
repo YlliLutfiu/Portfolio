@@ -3,7 +3,7 @@ import { JetBrains_Mono, Sora } from "next/font/google";
 import "./globals.css";
 import { ToastProvider } from "@/components/toast";
 import BackToTop from "@/components/back-to-top";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next"
 
 const sora = Sora({
   variable: "--font-sora",
