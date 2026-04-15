@@ -80,6 +80,7 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               onClick={() => handleNavClick(item.href)}
+              aria-current={activeSection === item.href ? "page" : undefined}
               className={`group relative py-1 text-sm transition ${activeSection === item.href
                 ? "text-foreground"
                 : "text-foreground/70 hover:text-foreground"
@@ -119,10 +120,11 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-1">
               {navItems.map((item, index) => (
-                <motion.a
+                  <motion.a
                   key={item.href}
                   href={item.href}
                   onClick={() => handleNavClick(item.href)}
+                  aria-current={activeSection === item.href ? "page" : undefined}
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}

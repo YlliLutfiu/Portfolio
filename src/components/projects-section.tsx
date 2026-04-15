@@ -80,7 +80,7 @@ export default function ProjectsSection() {
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 whileHover={{ y: -10, scale: 1.01 }}
                 className={`group premium-card relative overflow-hidden rounded-3xl p-6 lg:p-7 flex flex-col justify-between ${isFeatured
-                  ? 'md:col-span-2 lg:col-span-3 xl:col-span-4 lg:row-span-2 col-start-1 row-start-1'
+                  ? 'md:col-span-2 lg:col-span-4 xl:col-span-4 lg:row-span-2 col-start-1 row-start-1'
                   : 'md:col-span-1 lg:col-span-2'
                   }`}
               >
@@ -150,12 +150,14 @@ export default function ProjectsSection() {
 
                       <button
                         type="button"
+                        aria-label={`Previous image for ${project.name}`}
                         className={`project-${project.id}-prev absolute left-3 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-accent hover:bg-accent/20 transition-all duration-300 opacity-80 hover:opacity-100`}
                       >
                         <ChevronLeft className="h-5 w-5" />
                       </button>
                       <button
                         type="button"
+                        aria-label={`Next image for ${project.name}`}
                         className={`project-${project.id}-next absolute right-3 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-accent hover:bg-accent/20 transition-all duration-300 opacity-80 hover:opacity-100`}
                       >
                         <ChevronRight className="h-5 w-5" />
