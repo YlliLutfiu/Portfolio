@@ -12,6 +12,7 @@ import { ArrowUpRight, ExternalLink, GitBranch, ChevronLeft, ChevronRight } from
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionWrapper from './section-wrapper';
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ProjectsSection() {
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
@@ -135,11 +136,13 @@ export default function ProjectsSection() {
                       >
                         {project.images.map((img, i) => (
                           <SwiperSlide key={i}>
-                            <img
+                            <Image
                               src={img}
                               alt={`${project.name} screenshot ${i + 1}`}
                               className="h-full w-full object-contain transition-all duration-500 hover:scale-105 hover:brightness-110"
                               loading="lazy"
+                              width={500}
+                              height={500}
                             />
                           </SwiperSlide>
                         ))}

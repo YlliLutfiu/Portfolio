@@ -8,11 +8,13 @@ import { Analytics } from "@vercel/analytics/next"
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
+  display: "swap",
 });
 
 <script
@@ -60,6 +62,10 @@ export const metadata: Metadata = {
     "Software Engineer Prishtinë",
     "Software Engineer Prizren",
   ],
+
+  verification: {
+    google: "vLgZNnDFB2Rcadf6BdpsCpNTWDHkkDsTm57klTPuJnM",
+  },
 
   authors: [{ name: "Ylli Lutfiu" }],
   creator: "Ylli Lutfiu",
