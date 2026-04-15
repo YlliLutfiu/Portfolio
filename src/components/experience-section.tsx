@@ -26,9 +26,12 @@ export default function ExperienceSection() {
             <p className="text-xs uppercase tracking-[0.18em] text-foreground/60">{item.duration}</p>
             <h3 className="mt-2 text-2xl font-medium tracking-[-0.02em]">{item.role}</h3>
             <p className="mt-1 text-sm text-accent">{item.company}</p>
-            <ul className="mt-4 space-y-2.5 text-sm leading-7 text-foreground/75">
+            <ul className="mt-5 space-y-3">
               {item.achievements.map((achievement) => (
-                <li key={achievement}>- {achievement}</li>
+                <li key={achievement} className="flex items-start text-sm leading-6 text-foreground/75">
+                  <span className="mr-3 mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/60" />
+                  <span>{achievement}</span>
+                </li>
               ))}
             </ul>
           </motion.article>

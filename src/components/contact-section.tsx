@@ -1,18 +1,22 @@
 "use client";
 
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "./section-wrapper";
-import { BriefcaseBusiness, GitBranch } from "lucide-react";
+import { BriefcaseBusiness, GitBranch, Loader2 } from "lucide-react";
+import { useToast } from "./toast";
 
 export default function ContactSection() {
   const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { showToast } = useToast();
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!form.current) return;
+    setIsSubmitting(true);
 
     emailjs
       .sendForm(
@@ -23,11 +27,13 @@ export default function ContactSection() {
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          showToast("Message sent successfully!", "success");
           form.current?.reset();
+          setIsSubmitting(false);
         },
         () => {
-          alert("Something went wrong. Try again.");
+          showToast("Something went wrong. Try again.", "error");
+          setIsSubmitting(false);
         }
       );
   };
@@ -42,13 +48,17 @@ export default function ContactSection() {
         <motion.form
           ref={form}
           onSubmit={sendEmail}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ delay: 0.1 }}
           className="premium-card space-y-4 rounded-3xl p-7"
         >
           <input
             type="text"
             name="from_name"
             placeholder="Full Name"
-            className="w-full rounded-xl border border-white/15 bg-background/60 px-4 py-3 text-sm"
+            className="w-full rounded-xl border border-white/15 bg-background/60 px-4 py-3 text-sm transition-all hover:border-white/25 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/30"
             required
           />
 
@@ -56,7 +66,7 @@ export default function ContactSection() {
             type="email"
             name="from_email"
             placeholder="Your Email"
-            className="w-full rounded-xl border border-white/15 bg-background/60 px-4 py-3 text-sm"
+            className="w-full rounded-xl border border-white/15 bg-background/60 px-4 py-3 text-sm transition-all hover:border-white/25 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/30"
             required
           />
 
@@ -64,15 +74,23 @@ export default function ContactSection() {
             name="message"
             placeholder="Your Message"
             rows={5}
-            className="w-full rounded-xl border border-white/15 bg-background/60 px-4 py-3 text-sm"
+            className="w-full rounded-xl border border-white/15 bg-background/60 px-4 py-3 text-sm transition-all hover:border-white/25 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/30"
             required
           />
 
           <button
             type="submit"
-            className="rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-slate-950"
+            disabled={isSubmitting}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-70"
           >
-            Send Message
+            {isSubmitting ? (
+              <>
+                <Loader2 size={16} className="animate-spin" />
+                Sending...
+              </>
+            ) : (
+              "Send Message"
+            )}
           </button>
         </motion.form>
         <motion.div
@@ -81,30 +99,30 @@ export default function ContactSection() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.1 }}
           className="premium-card rounded-3xl p-7"
-          >
-            <h3 className="text-2xl font-medium tracking-[-0.02em]">Elsewhere</h3>
-            <p className="mt-3 max-w-sm text-sm text-foreground/75">
+        >
+          <h3 className="text-2xl font-medium tracking-[-0.02em]">Elsewhere</h3>
+          <p className="mt-3 max-w-sm text-sm text-foreground/75">
             You can also connect with me through professional networks and open-source channels.
-            </p>
-            <div className="mt-6 space-y-3">
-              <a
+          </p>
+          <div className="mt-6 space-y-3">
+            <a
               href="https://github.com/YlliLutfiu"
               target="_blank"
               rel="noreferrer"
               className="inline-flex w-full items-center gap-2 rounded-xl border border-white/15 px-4 py-3 text-sm transition hover:bg-white/10"
-              >
+            >
               <GitBranch size={18} /> GitHub
-              </a>
-              <a
+            </a>
+            <a
               href="https://www.linkedin.com/in/ylli-lutfiu/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex w-full items-center gap-2 rounded-xl border border-white/15 px-4 py-3 text-sm transition hover:bg-white/10"
-              >
+            >
               <BriefcaseBusiness size={18} /> LinkedIn
-              </a>
-            </div>
-          </motion.div>
+            </a>
+          </div>
+        </motion.div>
       </div>
     </SectionWrapper>
   );

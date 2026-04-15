@@ -16,6 +16,11 @@ export type Experience = {
   achievements: string[];
 };
 
+export type Skill = {
+  name: string;
+  level: "Advanced" | "Intermediate" | "Familiar";
+};
+
 export const navItems = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
@@ -24,41 +29,34 @@ export const navItems = [
   { href: "#contact", label: "Contact" },
 ];
 
-export const frontendSkills = [
-  "Angular",
-  "RxJS",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "Redux",
-  "Tailwind CSS",
-  "Framer Motion",
-  "Chart.js",
-  "SCSS",
-  "Ionic",
+export const frontendSkills: Skill[] = [
+  { name: "Angular", level: "Advanced" },
+  { name: "React", level: "Intermediate" },
+  { name: "Next.js", level: "Intermediate" },
+  { name: "TypeScript", level: "Advanced" },
+  { name: "JavaScript", level: "Advanced" },
+  { name: "RxJS", level: "Intermediate" },
+  { name: "Redux", level: "Intermediate" },
+  { name: "Tailwind CSS", level: "Advanced" },
+  { name: "Ionic", level: "Advanced" },
 ];
 
-export const backendSkills = [
-  "NestJS",
-  "Node.js",
-  "PostgreSQL",
-  "TypeORM",
-  "REST APIs",
-  "WebSockets",
-  "OpenAPI / Swagger",
-  "JWT Authentication",
-  "RBAC (Role-Based Access Control)",
-  "PDF Generation (Puppeteer / Playwright)",
+export const backendSkills: Skill[] = [
+  { name: "NestJS", level: "Advanced" },
+  { name: "Node.js", level: "Advanced" },
+  { name: "PostgreSQL", level: "Advanced" },
+  { name: "TypeORM", level: "Advanced" },
+  { name: "REST APIs", level: "Advanced" },
+  { name: "WebSockets", level: "Intermediate" },
+  { name: "JWT Authentication", level: "Intermediate" },
 ];
 
-export const toolSkills = [
-  "Git & GitHub",
-  "Bitbucket",
-  "Docker",
-  "OpenAPI Generator",
-  "Agile / Scrum",
-  "Database Migrations",
+export const toolSkills: Skill[] = [
+  { name: "Git & GitHub", level: "Advanced" },
+  { name: "Docker", level: "Intermediate" },
+  { name: "OpenAPI / Swagger", level: "Intermediate" },
+  { name: "Bitbucket", level: "Advanced" },
+  { name: "Agile / Scrum", level: "Advanced" },
 ];
 
 export const projects: Project[] = [

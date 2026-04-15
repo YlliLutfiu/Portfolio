@@ -1,26 +1,37 @@
 "use client";
 
-import { backendSkills, frontendSkills, toolSkills } from "@/lib/portfolio-data";
+import { backendSkills, frontendSkills, toolSkills, Skill } from "@/lib/portfolio-data";
 import { motion } from "framer-motion";
 import SectionWrapper from "./section-wrapper";
 
 type SkillGroupProps = {
   title: string;
-  skills: string[];
+  skills: Skill[];
+};
+
+const levelStyles = {
+  Advanced: "border-green-400/30 hover:border-green-400",
+  Intermediate: "border-yellow-400/30 hover:border-yellow-400",
+  Familiar: "border-gray-400/30 hover:border-gray-400",
 };
 
 function SkillGroup({ title, skills }: SkillGroupProps) {
   return (
     <div className="premium-card rounded-3xl p-7">
       <h3 className="mb-4 text-xl font-medium tracking-[-0.02em]">{title}</h3>
-      <div className="flex flex-wrap gap-2">
+
+      <div className="flex flex-wrap gap-y-4 gap-x-2">
         {skills.map((skill) => (
-          <span
-            key={skill}
-            className="cursor-pointer rounded-full border border-white/15 bg-background/60 px-3.5 py-1.5 text-xs text-foreground/85 transition hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_8px_16px_rgba(125,211,252,0.2)]"
-          >
-            {skill}
-          </span>
+          <div key={skill.name} className="group relative">
+            <span
+              className="cursor-pointer rounded-full border border-white/15 bg-background/60 px-3.5 py-1.5 text-xs text-foreground/85 transition hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_8px_16px_rgba(125,211,252,0.2)]"
+            >
+              {skill.name}
+            </span>
+            <div className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 w-max -translate-x-1/2 rounded-md bg-black/80 px-2 py-1 text-[10px] text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+              {skill.level}
+            </div>
+          </div>
         ))}
       </div>
     </div>

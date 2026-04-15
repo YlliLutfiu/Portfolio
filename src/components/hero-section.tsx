@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FileText, ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
   const orbitTech = ["Angular", "TypeScript", "NestJS", "PostgreSQL", "Next.js", "Framer"];
@@ -27,43 +28,51 @@ export default function HeroSection() {
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.15 },
+              },
+            }}
             className="max-w-4xl"
           >
-            <p className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent mb-6 text-sm uppercase tracking-[0.26em] text-accent">
+            <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent mb-6  text-sm uppercase tracking-[0.26em] text-accent">
               Ylli Lutfiu — Full Stack Developer
-            </p>
-            <h1 className="text-5xl font-semibold leading-[1.03] tracking-[-0.045em] md:text-7xl">
-              Crafting scalable full-stack applications with clean architecture and exceptional user experience.
-            </h1>
-            <p className="mt-8 max-w-3xl text-base leading-8 text-foreground/74 md:text-xl md:leading-9">
-              Full-stack developer with ~2 years of experience specializing in Angular and NestJS.
-              I focus on building performant, maintainable applications with strong frontend architecture,
-              real-time features, and clean backend systems.
-            </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            </motion.p>
+            <motion.h1 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-5xl font-semibold leading-[1.03] tracking-[-0.045em] md:text-7xl">
+              I build scalable web applications.
+            </motion.h1>
+            <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mt-6 max-w-3xl text-base leading-8 text-foreground/74 md:text-xl md:leading-9">
+              Full-stack developer with ~2 years of experience specializing in Angular and NestJS. Building performant, maintainable applications with clean architecture, real-world functionality, and an eye for design.
+            </motion.p>
+            <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
               <a
                 href="#projects"
-                className="rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-slate-950 shadow-[0_10px_30px_rgba(125,211,252,0.35)] transition hover:-translate-y-0.5 hover:opacity-90"
+                className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-slate-950 shadow-[0_10px_30px_rgba(125,211,252,0.35)] transition hover:-translate-y-0.5 hover:opacity-90"
               >
                 View Projects
               </a>
               <a
-                href="#contact"
-                className="rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-white/10"
+                href="/Ylli Lutfiu CV.pdf"
+                target="_blank"
+                rel="noreferrer"
+                download="Ylli_Lutfiu_CV.pdf"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-white/10"
               >
-                Contact Me
+                <FileText size={16} />
+                Download Resume
               </a>
-            </div>
-            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:max-w-2xl md:max-w-none">
+            </motion.div>
+            <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mt-12 grid grid-cols-1 gap-4 sm:max-w-2xl sm:grid-cols-3 md:max-w-none">
               <div className="group rounded-2xl border border-white/12 bg-white/5 p-3 sm:p-4 text-center overflow-hidden">
                 <p className="text-xl sm:text-2xl font-semibold">~2</p>
                 <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.16em] text-foreground/65 leading-tight line-clamp-2">Years of Experience</p>
               </div>
               <div className="group rounded-2xl border border-white/12 bg-white/5 p-3 sm:p-4 text-center overflow-hidden">
-                <p className="text-xl sm:text-2xl font-semibold">5+</p>
+                <p className="text-xl sm:text-2xl font-semibold">7+</p>
                 <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.16em] text-foreground/65 leading-tight line-clamp-2">
                   Projects
                 </p>
@@ -74,7 +83,7 @@ export default function HeroSection() {
                   Technologies
                 </p>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -152,14 +161,23 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-10 text-center text-xs uppercase tracking-[0.22em] text-foreground/45"
+          className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
         >
-          Scroll to explore
-        </motion.p>
+          <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/45">
+            Scroll to explore
+          </p>
+          <motion.div
+            animate={{ y: [0, 5, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="text-foreground/40"
+          >
+            <ChevronDown size={14} />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
