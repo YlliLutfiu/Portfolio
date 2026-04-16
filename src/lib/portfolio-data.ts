@@ -122,13 +122,13 @@ export const projects: Project[] = [
     id: 4,
   },
   {
-    name: "BiteCosmetics",
+    name: "HotiInterior",
     label: "Personal Project",
     description:
-      "A full-stack e-commerce web application for browsing and displaying cosmetic products with dynamic content management. The project integrates frontend and backend functionality with a MySQL database, allowing product data to be retrieved and managed through server-side logic using PHP.",
-    tech: ["HTML", "CSS", "PHP", "MySQL"],
-    github: "https://github.com/YlliLutfiu/BiteCosmetics",
-    demo: "#",
+      "A console-based banking system built in Java that simulates core banking operations such as account management, deposits, withdrawals, and transfers between accounts. The system follows object-oriented design principles and includes transaction handling with configurable fees, as well as tracking of total transfers and fees collected. It demonstrates core backend logic, encapsulation, and real-world financial operation simulation.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS"],
+    github: "https://github.com/YlliLutfiu/HotiInterior",
+    demo: "https://hoti-interior.vercel.app",
     id: 5,
   },
   {
@@ -140,7 +140,17 @@ export const projects: Project[] = [
     github: "https://github.com/YlliLutfiu/BankSystem",
     demo: "#",
     id: 6,
-  }
+  },
+  {
+    name: "BiteCosmetics",
+    label: "Personal Project",
+    description:
+      "A full-stack e-commerce web application for browsing and displaying cosmetic products with dynamic content management. The project integrates frontend and backend functionality with a MySQL database, allowing product data to be retrieved and managed through server-side logic using PHP.",
+    tech: ["HTML", "CSS", "PHP", "MySQL"],
+    github: "https://github.com/YlliLutfiu/BiteCosmetics",
+    demo: "#",
+    id: 7,
+  },
 ];
 
 export const experience: Experience[] = [
