@@ -66,7 +66,7 @@ export const projects: Project[] = [
     description:
       "Full-stack business application focused on invoice management, employee workflows, and real-time operations. Features include invoice customization and PDF export (single & bulk), CSV imports, time tracking, project/task management, live notifications and live chat.",
     tech: [
-      "Angular 17+",
+      "Angular",
       "Tailwind",
       "Ionic",
       "NestJS",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     name: "HotiInterior",
     label: "Personal Project",
     description:
-      "A console-based banking system built in Java that simulates core banking operations such as account management, deposits, withdrawals, and transfers between accounts. The system follows object-oriented design principles and includes transaction handling with configurable fees, as well as tracking of total transfers and fees collected. It demonstrates core backend logic, encapsulation, and real-world financial operation simulation.",
+      "A modern frontend website built to showcase an interior business, with a clean layout and smooth animations. It includes project showcases with detailed pages and focuses on creating a premium, responsive user experience.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS"],
     github: "https://github.com/YlliLutfiu/HotiInterior",
     demo: "https://hoti-interior.vercel.app",
