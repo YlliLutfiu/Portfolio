@@ -72,7 +72,7 @@ export default function HeroSection() {
                 <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.16em] text-foreground/65 leading-tight line-clamp-2">Years of Experience</p>
               </div>
               <div className="group rounded-2xl border border-white/12 bg-white/5 p-3 sm:p-4 text-center overflow-hidden">
-                <p className="text-xl sm:text-2xl font-semibold">7+</p>
+                <p className="text-xl sm:text-2xl font-semibold">8+</p>
                 <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.16em] text-foreground/65 leading-tight line-clamp-2">
                   Projects
                 </p>
