@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
       "@type": "Person",
       name: "Ylli Lutfiu",
       jobTitle: "Full-Stack Developer",
-      url: "https://portfolio-navy-theta-16.vercel.app",
+      url: "https://www.yllilutfiu.com",
       sameAs: [
         "https://github.com/YlliLutfiu",
       ],
@@ -74,11 +74,11 @@ export const metadata: Metadata = {
     title: "Ylli Lutfiu | Full-Stack Developer",
     description:
       "Portfolio of Ylli Lutfiu – Full-stack developer building scalable web applications with Angular and NestJS.",
-    url: "https://portfolio-navy-theta-16.vercel.app", // replace later with your domain !!!
+    url: "https://www.yllilutfiu.com",
     siteName: "Ylli Portfolio",
     images: [
       {
-        url: "https://portfolio-navy-theta-16.vercel.app/og-image.png",
+        url: "https://www.yllilutfiu.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ylli Lutfiu Portfolio",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     title: "Ylli Lutfiu | Full-Stack Developer",
     description:
       "Full-stack developer specializing in Angular, NestJS, and modern web applications.",
-    images: ["https://portfolio-navy-theta-16.vercel.app/og-image.png"],
+    images: ["https://www.yllilutfiu.com/og-image.png"],
   },
 
   robots: {
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  metadataBase: new URL("https://portfolio-navy-theta-16.vercel.app"), // update later !!!
+  metadataBase: new URL("https://www.yllilutfiu.com"),
 };
 
 export default function RootLayout({

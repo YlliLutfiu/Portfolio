@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://portfolio-navy-theta-16.vercel.app
+Host: https://www.yllilutfiu.com
 
 # Sitemaps
-Sitemap: https://portfolio-navy-theta-16.vercel.app/sitemap.xml
+Sitemap: https://www.yllilutfiu.com/sitemap.xml

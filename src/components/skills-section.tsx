@@ -22,14 +22,14 @@ function SkillGroup({ title, skills }: SkillGroupProps) {
 
       <div className="flex flex-wrap gap-y-4 gap-x-2">
         {skills.map((skill) => (
-          <div 
-            key={skill.name} 
-            className="group relative" 
-            tabIndex={0} 
+          <div
+            key={skill.name}
+            className="group relative"
+            tabIndex={0}
             aria-label={`${skill.name} (${skill.level})`}
           >
             <span
-              className="rounded-full border border-white/15 bg-background/60 px-3.5 py-1.5 text-xs text-foreground/85 transition group-hover:-translate-y-0.5 group-hover:border-accent/40 group-hover:shadow-[0_8px_16px_rgba(125,211,252,0.2)] group-focus:-translate-y-0.5 group-focus:border-accent/40 group-focus:ring-1 group-focus:ring-accent group-focus:outline-none"
+              className="rounded-full border border-white/15 bg-background/60 px-3.5 py-1.5 text-xs text-foreground/85 transition group-hover:-translate-y-0.5 group-hover:border-accent/40 group-hover:shadow-[0_8px_16px_rgba(125,211,252,0.2)] group-focus:-translate-y-0.5 group-focus:border-accent/40 group-focus:ring-1 group-focus:ring-accent group-focus:outline-none cursor-pointer"
             >
               {skill.name}
             </span>

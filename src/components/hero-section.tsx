@@ -46,7 +46,7 @@ export default function HeroSection() {
               I build scalable web applications.
             </motion.h1>
             <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mt-6 max-w-3xl text-base leading-8 text-foreground/74 md:text-xl md:leading-9">
-              Full-stack developer with ~2 years of experience specializing in Angular and NestJS. Building performant, maintainable applications with clean architecture, real-world functionality, and an eye for design.
+              Full-stack developer with 2+ years of experience specializing in Angular and NestJS. Building performant, maintainable applications with clean architecture, real-world functionality, and an eye for design.
             </motion.p>
             <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
               <a
@@ -68,7 +68,7 @@ export default function HeroSection() {
             </motion.div>
             <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mt-12 grid grid-cols-1 gap-4 sm:max-w-2xl sm:grid-cols-3 md:max-w-none">
               <div className="group rounded-2xl border border-white/12 bg-white/5 p-3 sm:p-4 text-center overflow-hidden">
-                <p className="text-xl sm:text-2xl font-semibold">~2</p>
+                <p className="text-xl sm:text-2xl font-semibold">2+</p>
                 <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.16em] text-foreground/65 leading-tight line-clamp-2">Years of Experience</p>
               </div>
               <div className="group rounded-2xl border border-white/12 bg-white/5 p-3 sm:p-4 text-center overflow-hidden">

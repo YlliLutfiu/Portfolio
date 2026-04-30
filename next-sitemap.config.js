@@ -1,4 +1,4 @@
 module.exports = {
-    siteUrl: "https://portfolio-navy-theta-16.vercel.app",
+    siteUrl: "https://www.yllilutfiu.com",
     generateRobotsTxt: true,
 };

@@ -132,6 +132,16 @@ export const projects: Project[] = [
     id: 5,
   },
   {
+    name: "destiLL",
+    label: "Personal Project",
+    description:
+      "A modern frontend website built to showcase destiLL, a tapas bar, art café, bookstore, and hidden garden space. It features a clean layout, smooth animations, and focuses on delivering a warm, premium, and fully responsive user experience.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS"],
+    github: "https://github.com/YlliLutfiu/destiLL",
+    demo: "https://destill-gamma.vercel.app/",
+    id: 6,
+  },
+  {
     name: "BankSystem",
     label: "Personal Project",
     description:
@@ -139,7 +149,7 @@ export const projects: Project[] = [
     tech: ["Java (OOP, CLI Application)"],
     github: "https://github.com/YlliLutfiu/BankSystem",
     demo: "#",
-    id: 6,
+    id: 7,
   },
   {
     name: "BiteCosmetics",
@@ -149,7 +159,7 @@ export const projects: Project[] = [
     tech: ["HTML", "CSS", "PHP", "MySQL"],
     github: "https://github.com/YlliLutfiu/BiteCosmetics",
     demo: "#",
-    id: 7,
+    id: 8,
   },
 ];
 
